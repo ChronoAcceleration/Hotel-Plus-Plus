@@ -1,6 +1,6 @@
--- AmbientNew.lua
+-- Ambient.lua
 -- [Comet Development] By Chrono
--- This file is part of the Hotel +++ Project.
+-- This file is part of the Hotel ++ Project.
 
 local Players = game:GetService("Players")
 local SyncHelper = loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAcceleration/Comet-Development/refs/heads/main/Doors/Utility/SyncHelper.lua"))()
@@ -61,13 +61,13 @@ local function createAmbientNoise(Table: table): Sound
         function(): ()
             AttachmentParent:Destroy()
 
-            if _G.DEBUG_HOTELPLUSPLUSPLUS then
+            if _G.DEBUG_HOTELPLUSPLUS then
                 warn("Deleted Ambient Sound!")
             end
         end
     )
 
-    if _G.DEBUG_HOTELPLUSPLUSPLUS then
+    if _G.DEBUG_HOTELPLUSPLUS then
         warn("Ambient Sound Created: ", AttachmentParent.Position)
     end
 
@@ -79,7 +79,7 @@ while true do
         SyncHelper:generateFullRandom(10, 30, os.time())
     )
 
-    local TableChance = SyncHelper:generateFullRandom(1, 2, os.time())
+    local TableChance = SyncHelper:generateFullRandom(1, 5, os.time())
 
     if TableChance == 1 then
         createAmbientNoise(AMBIENT_SOUNDS):Play()
