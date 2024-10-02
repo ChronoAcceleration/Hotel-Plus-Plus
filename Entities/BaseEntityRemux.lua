@@ -38,10 +38,10 @@ EntityHook:On(
 
         local CloseSound = RushFootsteps:Clone()
         CloseSound.PlaybackSpeed = 0.1
-        CloseSound.Volume = 2
+        CloseSound.Volume = 2.5
         CloseSound.Parent = RushNew
         CloseSound.Name = "CloseSound"
-        CloseSound.RollOffMaxDistance = 50
+        CloseSound.RollOffMaxDistance = 80
         CloseSound.RollOffMinDistance = 0
         CloseSound.RollOffMode = Enum.RollOffMode.Linear
         CloseSound.SoundId = "rbxassetid://9112796831"
