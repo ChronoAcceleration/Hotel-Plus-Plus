@@ -55,7 +55,7 @@ EntityHook:On(
         local RushMainTrail = RushEffects.BlackTrail
         local RushFace = RushEffects.ParticleEmitter
 
-        RushBlack.Size = 10
+        RushBlack.Size = NumberSequence.new(10)
         RushBlack.LockedToPart = false
         RushMainTrail.Size = 9
         RushFace.Rotation = NumberRange.new(-5, 5)
