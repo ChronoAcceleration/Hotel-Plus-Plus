@@ -52,8 +52,8 @@ local function convertToDay(Room: Model): ()
 
                 NewSurfaceLight.Parent = LightPanel
                 NewSurfaceLight.Name = "Daylight"
-                NewSurfaceLight.Brightness = 1
-                NewSurfaceLight.Color = Color3.fromRGB(193, 193, 193)
+                NewSurfaceLight.Brightness = 0.5
+                NewSurfaceLight.Color = Color3.fromRGB(184, 184, 184)
                 NewSurfaceLight.Range = 60
                 NewSurfaceLight.Angle = 120
                 NewSurfaceLight.Shadows = true
@@ -62,7 +62,7 @@ local function convertToDay(Room: Model): ()
                 Skybox.Color = Color3.fromRGB(126, 126, 126)
                 local Forcer = Skybox:GetPropertyChangedSignal("Color"):Connect(
                     function(): ()
-                        Skybox.Color = Color3.fromRGB(126, 126, 126)
+                        Skybox.Color = Color3.fromRGB(88, 88, 88)
                     end
                 )
 
