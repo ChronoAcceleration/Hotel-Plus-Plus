@@ -76,7 +76,7 @@ end
 
 while true do
     SyncHelper:deltaWait(
-        SyncHelper:generateFullRandom(10, 30, os.time())
+        SyncHelper:generateFullRandom(30, 75, os.time())
     )
 
     local TableChance = SyncHelper:generateFullRandom(1, 5, os.time())
