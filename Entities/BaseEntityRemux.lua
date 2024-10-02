@@ -25,6 +25,10 @@ local RootPart = Character:WaitForChild("HumanoidRootPart")
 EntityHook:On(
     "Rush",
     function(Rush: Model): ()
+        if _G.DEBUG_HOTELPLUSPLUS then
+            warn("Remuxing Rush entity!")
+        end
+
         local RushNew = Rush.RushNew
 
         local RushFootsteps = RushNew.Footsteps

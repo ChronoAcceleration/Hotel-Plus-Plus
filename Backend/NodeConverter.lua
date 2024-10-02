@@ -9,7 +9,7 @@ local function convertToLegacy(Room: Model): ()
         return nil
     end
 
-    local PathfindNodes = Room:FindFirstChild("PathfindNodes")
+    local PathfindNodes = Room:WaitForChild("PathfindNodes", 10)
 
     if not PathfindNodes then
         warn("PathfindNodes not found in room: " .. Room.Name)
@@ -21,7 +21,7 @@ local function convertToLegacy(Room: Model): ()
     LegacyNodes.Parent = Room
     Room:AddTag("Converted")
 
-    if _G.DEBUG_HOTELPLUS then
+    if _G.DEBUG_HOTELPLUSPLUS then
         warn("Converted PathfindNodes to Nodes in room: " .. Room.Name)
     end
 end

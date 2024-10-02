@@ -5,9 +5,11 @@
 --[[
 
 Globals:
-_G.DEBUG_HOTELPLUSPLUSPLUS (self explanatory lol)
+_G.DEBUG_HOTELPLUSPLUS (self explanatory lol)
 
 --]]
+
+_G.DEBUG_HOTELPLUSPLUS = true -- Debugging (Since its in a beta lol)
 
 local function loadCode(Path: string, NewThread: boolean): ()
     local BASE_URL = "https://raw.githubusercontent.com/ChronoAcceleration/Hotel-Plus-Plus/refs/heads/main"
