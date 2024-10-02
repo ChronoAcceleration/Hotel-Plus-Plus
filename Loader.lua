@@ -9,7 +9,9 @@ _G.DEBUG_HOTELPLUSPLUSPLUS (self explanatory lol)
 
 --]]
 
-local function loadCode(URL: string, NewThread: boolean): ()
+local function loadCode(Path: string, NewThread: boolean): ()
+    local BASE_URL = "https://raw.githubusercontent.com/ChronoAcceleration/Hotel-Plus-Plus/refs/heads/main"
+    local URL = string.format("%s/%s", BASE_URL, Path)
     local Raw = game:HttpGet(URL)
 
     if NewThread then
@@ -19,5 +21,6 @@ local function loadCode(URL: string, NewThread: boolean): ()
     end
 end
 
-loadCode("https://raw.githubusercontent.com/ChronoAcceleration/Hotel-Plus-Plus/refs/heads/main/Backend/NodeConverter.lua") -- Backend/NodeConverter.lua
-loadCode("https://raw.githubusercontent.com/ChronoAcceleration/Hotel-Plus-Plus/refs/heads/main/QOL/Ambient.lua", true)  -- QOL/Ambient.lua (Includes While Loop)
+loadCode("Backend/NodeConverter.lua") -- Backend/NodeConverter.lua
+loadCode("QOL/Ambient.lua", true)  -- QOL/Ambient.lua (Includes While Loop)
+loadCode("Entities/BaseEntityRemux.lua") -- Entities/BaseEntityRemux.lua

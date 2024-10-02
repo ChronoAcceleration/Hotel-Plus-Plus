@@ -10,7 +10,7 @@ Solara will have downgraded effects :(
 
 --]]
 
-local ExecutorHelper = loadstring(game:HttpGet("..."))() -- Will be fixed in the future
+local ExecutorHelper = loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAcceleration/Hotel-Plus-Plus/refs/heads/main/Modules/Executor.lua"))()
 local ScriptUtility = loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAcceleration/Comet-Development/refs/heads/main/Doors/Utility/DoorsScriptUtility.lua"))()
 local EntityHook = ScriptUtility.EntityHook:New()
 
