@@ -45,6 +45,8 @@ EntityHook:On(
         CloseSound.RollOffMinDistance = 0
         CloseSound.RollOffMode = Enum.RollOffMode.Linear
         CloseSound.SoundId = "rbxassetid://9112796831"
+        CloseSound.Looped = true
+        CloseSound:Play()
         
         for Index, SoundMod in CloseSound:GetChildren() do
             SoundMod:Destroy()
