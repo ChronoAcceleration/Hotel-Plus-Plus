@@ -6,7 +6,8 @@
 local CurrentRooms = workspace:WaitForChild("CurrentRooms")
 local RunService = game:GetService("RunService")
 
-local function convertToDay(Room: Model)
+local function convertToDay(Room: Model): ()
+    task.wait(5) -- Stream In
     local IndexedWindows = {}
 
     for _, RoomAsset in Room:GetDescendants() do
