@@ -18,7 +18,7 @@ if ExecutorHelper:IsSolara() then
     return warn("Solara does not support entity remuxing!")
 end
 
-local Player = game.Players.LocalPlayer
+local Player = game.Players.LocalPlayer -- this does not follow my standards, but i dont care lol
 local Character = Player.Character or Player.CharacterAdded:Wait()
 local RootPart = Character:WaitForChild("HumanoidRootPart")
 
@@ -38,10 +38,10 @@ EntityHook:On(
 
         local CloseSound = RushFootsteps:Clone()
         CloseSound.PlaybackSpeed = 0.1
-        CloseSound.Volume = 2.5
+        CloseSound.Volume = 3.5
         CloseSound.Parent = RushNew
         CloseSound.Name = "CloseSound"
-        CloseSound.RollOffMaxDistance = 80
+        CloseSound.RollOffMaxDistance = 90
         CloseSound.RollOffMinDistance = 0
         CloseSound.RollOffMode = Enum.RollOffMode.Linear
         CloseSound.SoundId = "rbxassetid://9112796831"
