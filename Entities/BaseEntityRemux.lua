@@ -1,22 +1,22 @@
-local RunService = game:GetService("RunService")
 -- BaseEntityRemux.lua
 -- [Comet Development] By Chrono
 -- This file is part of the Hotel ++ Project.
 
---[[
-
-Solara will have downgraded effects :(
-(Sorry!!! Maybe fix your require() and ill have this work!)
-
---]]
-
+local RunService = game:GetService("RunService")
 local ExecutorHelper = loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAcceleration/Hotel-Plus-Plus/refs/heads/main/Modules/Executor.lua"))()
 local ScriptUtility = loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAcceleration/Comet-Development/refs/heads/main/Doors/Utility/DoorsScriptUtility.lua"))()
 local EntityHook = ScriptUtility.EntityHook:New()
 
+--[[
+
 if ExecutorHelper:IsSolara() then
     return warn("Solara does not support entity remuxing!")
 end
+
+When I implement camerashake later, make sure to add this condition chrono. (Past Self)
+Also make sure to remux ambush later.
+
+--]]
 
 local Player = game.Players.LocalPlayer -- this does not follow my standards, but i dont care lol
 local Character = Player.Character or Player.CharacterAdded:Wait()
@@ -59,6 +59,7 @@ EntityHook:On(
 
         RushBlack.Size = NumberSequence.new(10)
         RushBlack.LockedToPart = false
+        RushBlack.Enabled = true
         RushMainTrail.Size = NumberSequence.new(9)
         RushFace.Rotation = NumberRange.new(-5, 5)
 
@@ -76,12 +77,5 @@ EntityHook:On(
 
         Rush.Destroying:Wait()
         DistanceConnection:Disconnect()
-    end
-)
-
-EntityHook:On(
-    "Ambush",
-    function(Ambush: Model): ()
-        -- no fuck you haha ill do this later im lazy blep!
     end
 )
