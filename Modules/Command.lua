@@ -3,6 +3,7 @@
 -- This file is part of the Hotel ++ Project.
 -- Purely for debugging purposes.
 
+local Players = game:GetService("Players")
 local TextChatService = game:GetService("TextChatService")
 
 local SlashCommands = {}
@@ -39,10 +40,13 @@ local function onChatMessage(textChatMessage)
     local args = message:split(" ")
     local commandName = args[1]:sub(2):lower()
     table.remove(args, 1) -- Remove the command name from args
+
+    local commandUser = textChatMessage.TextSource
+    local player = Players:FindFirstChild(commandUser)
     
     local command = SlashCommands[commandName]
     if command then
-        command.callback(textChatMessage.TextSource, args)
+        command.callback(player, args)
     end
 end
 
