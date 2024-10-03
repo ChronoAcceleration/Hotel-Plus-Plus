@@ -24,7 +24,10 @@ local function loadCode(Path: string, NewThread: boolean): ()
 end
 
 loadCode("Backend/NodeConverter.lua")
+loadCode("Backend/MischeviousLight.lua")
+
 loadCode("QOL/Ambient.lua", true)  -- (Includes While Loop)
-loadCode("Entities/BaseEntityRemux.lua")
 loadCode("QOL/Daytime.lua")
 loadCode("QOL/DoorSounds.lua", true)
+
+loadCode("Entities/BaseEntityRemux.lua")
