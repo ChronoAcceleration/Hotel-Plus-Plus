@@ -10,7 +10,7 @@ RoomHook:On(
     function(Room: Model): ()
         Room:WaitForChild("Door")
         
-        local Door = Room:FindFirstChild('Door')
+        local Door = Room:WaitForChild("Door")
         Door.Door.Unlock.SoundId = "rbxassetid://7758131110"
         Door.Door.Bell.Volume = 1.3
         Door.Door.SlamOpen.SoundId = "rbxassetid://9113647192"

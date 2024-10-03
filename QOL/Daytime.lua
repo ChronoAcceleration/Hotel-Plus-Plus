@@ -19,7 +19,7 @@ local function convertToDay(Room: Model): ()
             continue
         end
 
-        if RoomAsset.Name == "Window" then
+        if RoomAsset.Name == "Window" or RoomAsset.Name == "Window_Tall" then
             if _G.DEBUG_HOTELPLUSPLUS then
                 warn("Found window in room: " .. Room.Name)
             end
@@ -52,7 +52,7 @@ local function convertToDay(Room: Model): ()
 
                 NewSurfaceLight.Parent = LightPanel
                 NewSurfaceLight.Name = "Daylight"
-                NewSurfaceLight.Brightness = 0.5
+                NewSurfaceLight.Brightness = 0.3
                 NewSurfaceLight.Color = Color3.fromRGB(184, 184, 184)
                 NewSurfaceLight.Range = 60
                 NewSurfaceLight.Angle = 120
