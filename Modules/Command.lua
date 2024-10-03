@@ -54,6 +54,8 @@ SlashCommandsModule:AddCommand("help", "Display all available commands", functio
     SlashCommandsModule:SendMessage(helpMessage)
 end)
 
-TextChatService.MessageReceived:Connect(onChatMessage)
+TextChatService.OnIncomingMessage = function(TextChatMessage: TextChatMessage): ()
+    onChatMessage(TextChatMessage)
+end
 
 return SlashCommandsModule
