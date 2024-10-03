@@ -23,6 +23,8 @@ local function loadCode(Path: string, NewThread: boolean): ()
     end
 end
 
+loadCode("Debug/Commands.lua")
+
 loadCode("Backend/NodeConverter.lua")
 loadCode("Backend/MischeviousLight.lua")
 
