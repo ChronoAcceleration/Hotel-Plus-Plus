@@ -1,6 +1,6 @@
 -- Loader.lua
 -- [Comet Development] By Chrono
--- This file is part of the Hotel +++ Project.
+-- This file is part of the Hotel ++ Project.
 
 --[[
 
