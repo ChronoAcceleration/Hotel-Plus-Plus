@@ -49,7 +49,7 @@ end
 SlashCommandsModule:AddCommand("help", "Display all available commands", function(player, args)
     local helpMessage = "Available commands:\n"
     for name, command in pairs(SlashCommands) do
-        helpMessage = helpMessage .. string.format("/%s - %s\n", name, command.description)
+        helpMessage = helpMessage .. string.format("?%s - %s\n", name, command.description)
     end
     SlashCommandsModule:SendMessage(helpMessage)
 end)
