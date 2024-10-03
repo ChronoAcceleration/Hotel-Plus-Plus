@@ -42,7 +42,7 @@ local function onChatMessage(textChatMessage)
     table.remove(args, 1) -- Remove the command name from args
 
     local commandUser = textChatMessage.TextSource
-    local player = Players:FindFirstChild(commandUser)
+    local player = Players[commandUser]
     
     local command = SlashCommands[commandName]
     if command then
