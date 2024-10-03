@@ -20,7 +20,7 @@ Commands:AddCommand("mischevious", "Toggle Mischevious Light", function(_, ARGUM
     Commands:SendMessage("Toggle: " .. tostring(_G.DO_RED_GUY))
 end)
 
-Commands:AddCommand("suicide", "Kill yourself, in the name of DEBUGGING!", function(PLAYER, ARGUMENTS)
+Commands:AddCommand("reset", "Kill yourself, in the name of DEBUGGING!", function(PLAYER, ARGUMENTS)
     local FixatedArgument = ARGUMENTS[1] or "false"
     local BooleanArgument = FixatedArgument == "true"
     local Type = ARGUMENTS[2] or "Blue"

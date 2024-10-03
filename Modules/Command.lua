@@ -54,7 +54,18 @@ SlashCommandsModule:AddCommand("help", "Display all available commands", functio
     SlashCommandsModule:SendMessage(helpMessage)
 end)
 
+local MessageCooldown = {}
 TextChatService.OnIncomingMessage = function(TextChatMessage: TextChatMessage): ()
+    if MessageCooldown[TextChatMessage.MessageId] then return end
+    MessageCooldown[TextChatMessage.MessageId] = true
+
+    task.delay(
+        0.5,
+        function(): ()
+            MessageCooldown[TextChatMessage.MessageId] = nil
+        end
+    )
+
     onChatMessage(TextChatMessage)
 end
 
