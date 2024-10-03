@@ -29,7 +29,7 @@ function SlashCommandsModule:RemoveCommand(name)
 end
 
 function SlashCommandsModule:SendMessage(message)
-    TextChatService.TextChannels.RBXGeneral:SendAsync(message)
+    TextChatService.TextChannels.RBXGeneral:DisplaySystemMessage(message)
 end
 
 local function onChatMessage(textChatMessage)
