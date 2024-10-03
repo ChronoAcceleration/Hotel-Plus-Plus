@@ -56,27 +56,4 @@ end)
 
 TextChatService.MessageReceived:Connect(onChatMessage)
 
---[[
-
-Sample:
-
-SlashCommandsModule:AddCommand("hello", "Say hello to the player", function(player, args)
-    print("Hello, " .. player.Name .. "!")
-end)
-
-SlashCommandsModule:AddCommand("teleport", "Teleport to coordinates", function(player, args)
-    if #args == 3 then
-        local x, y, z = tonumber(args[1]), tonumber(args[2]), tonumber(args[3])
-        if x and y and z then
-            player.Character:SetPrimaryPartCFrame(CFrame.new(x, y, z))
-        else
-            print("Invalid coordinates")
-        end
-    else
-        print("Usage: /teleport x y z")
-    end
-end)
-
---]]
-
 return SlashCommandsModule
