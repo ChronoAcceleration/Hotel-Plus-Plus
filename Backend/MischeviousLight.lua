@@ -33,7 +33,7 @@ local function getGitSoundId(GithubSoundPath: string, AssetName: string): Sound
     end
 
     local Sound = Instance.new("Sound")
-    Sound.SoundId = (getcustomasset or getsynasset)(AssetName..".mp3")
+    Sound.SoundId = getcustomasset(AssetName..".mp3", true)
     return Sound 
 end
 
@@ -67,12 +67,12 @@ Camera.ChildAdded:Connect(
             end
         end
 
-        for _, Fog in Fog:GetChildren() do
-            Fog.Color = RedPrimary
+        for _, FogL in Fog:GetChildren() do
+            FogL.Color = RedPrimary
         end
 
-        for _, Water in Water:GetChildren() do
-            Water.Color = RedPrimary
+        for _, WaterL in Water:GetChildren() do
+            WaterL.Color = RedPrimary
         end
 
         local BigLight = Lights.BigLight

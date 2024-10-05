@@ -6,14 +6,14 @@ local CurrentRooms = workspace:WaitForChild("CurrentRooms")
 
 local function convertToLegacy(Room: Model): ()
     if Room:HasTag("Converted") then
-        return nil
+        return
     end
 
     local PathfindNodes = Room:WaitForChild("PathfindNodes", 10)
 
     if not PathfindNodes then
         warn("PathfindNodes not found in room: " .. Room.Name)
-        return nil
+        return
     end
 
     local LegacyNodes = PathfindNodes:Clone()

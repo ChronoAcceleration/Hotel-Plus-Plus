@@ -27,7 +27,7 @@ local SLAMS = {
 
 local Player = Players.LocalPlayer
 
-local function createAmbientNoise(Table: table): Sound
+local function createAmbientNoise(Table): Sound
     local AttachmentParent = Instance.new("Attachment", Terrain)
     local PlayerCharacter = Player.Character
 

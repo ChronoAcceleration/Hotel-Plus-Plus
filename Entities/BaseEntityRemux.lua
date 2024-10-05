@@ -18,7 +18,8 @@ Also make sure to remux ambush later.
 
 --]]
 
-local Player = game.Players.LocalPlayer -- this does not follow my standards, but i dont care lol
+local Players = game:GetService("Players")
+local Player = Players.LocalPlayer -- this does not follow my standards, but i dont care lol
 local Character = Player.Character or Player.CharacterAdded:Wait()
 local RootPart = Character:WaitForChild("HumanoidRootPart")
 
