@@ -23,13 +23,11 @@ local function loadCode(Path: string, NewThread: boolean): ()
     end
 end
 
-loadCode("Debug/Commands.lua")
-
 loadCode("Backend/NodeConverter.lua")
 loadCode("Backend/MischeviousLight.lua")
 
 loadCode("QOL/Ambient.lua", true)  -- (Includes While Loop)
-loadCode("QOL/Daytime.lua")
-loadCode("QOL/DoorSounds.lua", true)
+loadCode("QOL/Daytime.lua", true) -- (Includes Wait For Child)
+loadCode("QOL/DoorSounds.lua", true) -- (Includes Wait For Child)
 
 loadCode("Entities/BaseEntityRemux.lua")
