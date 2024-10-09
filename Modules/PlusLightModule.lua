@@ -13,13 +13,16 @@ THIS IS NOT MY CODE DO NOT HOLD ME ACCOUNTABLE FOR IT GSC OR ILL KILL YOU!!
 
 local LightingModule = {};
 local ShakeModule = nil;
+local Replicated = game:GetService("ReplicatedStorage")
+local Workspace = workspace
+local CurrentRooms = Workspace.CurrentRooms
 
 function LightingModule.init(shakeModuleRef)
     ShakeModule = shakeModuleRef;
 end
 
 local TweenService = game:GetService("TweenService");
-local ShardModels = game:GetService("ReplicatedStorage").Shards:GetChildren();
+local ShardModels = Replicated.Shards:GetChildren();
 
 function LightingModule.shatter(room, percentToShatter, shatterSpeed, randomSeed)
     local targetRoom = room;
@@ -30,7 +33,7 @@ function LightingModule.shatter(room, percentToShatter, shatterSpeed, randomSeed
     task.spawn(function()
         if typeof(targetRoom) ~= "Instance" then
             if typeof(targetRoom) == "number" then
-                targetRoom = workspace.CurrentRooms:FindFirstChild(targetRoom);
+                targetRoom = CurrentRooms:FindFirstChild(targetRoom);
             else
                 targetRoom = nil;
             end
