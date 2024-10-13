@@ -29,5 +29,6 @@ loadCode("Backend/MischeviousLight.lua")
 loadCode("QOL/Ambient.lua", true)  -- (Includes While Loop)
 loadCode("QOL/Daytime.lua", true) -- (Includes Wait For Child)
 loadCode("QOL/DoorSounds.lua", true) -- (Includes Wait For Child)
+loadCode("QOL/Paintings.lua", true) -- (Includes Repeat Wait)
 
 loadCode("Entities/BaseEntityRemux.lua")
