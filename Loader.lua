@@ -30,5 +30,6 @@ loadCode("QOL/Ambient.lua", true)  -- (Includes While Loop)
 loadCode("QOL/Daytime.lua", true) -- (Includes Wait For Child)
 loadCode("QOL/DoorSounds.lua", true) -- (Includes Wait For Child)
 loadCode("QOL/Paintings.lua", true) -- (Includes Repeat Wait)
+loadCode("QOL/RushingFurtniture", true) -- (I am aware this is a spelling mistake. Too bad.)
 
 loadCode("Entities/BaseEntityRemux.lua")
